@@ -2,16 +2,16 @@ using EasySkillSystem.Base;
 using EasySkillSystem.Base.Generic;
 using UnityEngine;
 
-public class EnhanceBaseHealthRegainEffect : Effect
+public class DemoEnhanceBaseHealthRegainEffect : Effect
 {
     [SerializeField] float enhancePercent = .2f;
 
-    BaseHealthRegainEffect baseHealthRegainEffect;
+    DemoBaseHealthRegainEffect baseHealthRegainEffect;
     float enhancedAmount;
 
     public override Effect Act(Status status)
     {
-        baseHealthRegainEffect = (BaseHealthRegainEffect) status.GetEffect(typeof(BaseHealthRegainEffect));
+        baseHealthRegainEffect = (DemoBaseHealthRegainEffect) status.GetEffect(typeof(DemoBaseHealthRegainEffect));
         if (baseHealthRegainEffect == null) return this;
 
         enhancedAmount = baseHealthRegainEffect.baseHealthRegainPercent * enhancePercent;

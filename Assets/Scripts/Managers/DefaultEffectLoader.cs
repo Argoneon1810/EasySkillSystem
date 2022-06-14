@@ -14,5 +14,6 @@ public class DefaultEffectLoader : MonoBehaviour
         {
             status.AddEffect(defaultEffect);
         }
+        Destroy(this);
     }
 }

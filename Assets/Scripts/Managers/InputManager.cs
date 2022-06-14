@@ -10,7 +10,11 @@ public class InputManager : MonoBehaviour
 
     public event Action OnCollect;
 
+    public event Action<float, float> OnJump;
+
     public static InputManager Instance;
+
+    public bool inputLock = false;
 
     private void Awake()
     {
@@ -19,6 +23,8 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
+        if (inputLock) return;
+
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -28,5 +34,7 @@ public class InputManager : MonoBehaviour
         if (vertical < 0) OnLeftward?.Invoke(vertical);
 
         if (Input.GetKeyDown(KeyCode.KeypadEnter)) OnCollect?.Invoke();
+
+        if (Input.GetButtonDown("Jump")) OnJump?.Invoke(vertical, horizontal);
     }
 }

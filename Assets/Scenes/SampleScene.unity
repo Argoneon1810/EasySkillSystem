@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077711a6030b74446895705081455a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputLock: 0
 --- !u!4 &253253100
 Transform:
   m_ObjectHideFlags: 0
@@ -253,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2856039688770034637, guid: 4dcd1f3a52281fa4191062210830b720, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.99
+      value: -6.11
       objectReference: {fileID: 0}
     - target: {fileID: 2856039688770034637, guid: 4dcd1f3a52281fa4191062210830b720, type: 3}
       propertyPath: m_LocalPosition.y
@@ -261,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2856039688770034637, guid: 4dcd1f3a52281fa4191062210830b720, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.26
+      value: -6.06
       objectReference: {fileID: 0}
     - target: {fileID: 2856039688770034637, guid: 4dcd1f3a52281fa4191062210830b720, type: 3}
       propertyPath: m_LocalRotation.w
@@ -479,7 +480,7 @@ GameObject:
   - component: {fileID: 358322012}
   - component: {fileID: 358322011}
   - component: {fileID: 358322010}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1209,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 963194227}
   movementMultiplier: 10
+  jumpMultiplier: 500
   turnSmoothTime: 0.001
+  jumpableGroundContactAngle: 30
+  verticalJumpRecognitionAngle: 45
 --- !u!114 &1049238065
 MonoBehaviour:
   m_ObjectHideFlags: 0

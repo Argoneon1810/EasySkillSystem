@@ -3,7 +3,7 @@ using UnityEngine;
 using EasySkillSystem.Base;
 using EasySkillSystem.Base.Generic;
 
-public class BaseHealthRegainEffect : Effect
+public class DemoBaseHealthRegainEffect : Effect
 {
     public float baseHealthRegainPercent = 0.03f;
     IEnumerator healthRegainCoroutine;
